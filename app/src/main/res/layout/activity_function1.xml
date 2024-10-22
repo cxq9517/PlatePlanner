@@ -12,5 +12,5 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is Function 1 Activity" />
+        android:text="This is Function 1 Activity blahh blah blah blah blah" />
 </LinearLayout>
