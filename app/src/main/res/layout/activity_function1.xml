@@ -9,6 +9,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"/>
         <EditText
             android:id="@+id/searchEditText"
             android:layout_width="0dp"
@@ -16,12 +23,11 @@
             android:layout_weight="1"
             android:hint="Search recipes or ingredients"
             android:padding="8dp"/>
-
         <Button
-            android:id="@+id/searchButton"
+            android:id="@+id/createRecipe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"/>
+            android:text="Create"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -1,8 +1,11 @@
 package com.example.plateplanner
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +25,7 @@ class Function1Activity : AppCompatActivity() {
 
     private val repository = RecipeRepository()
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_function1)
@@ -29,6 +33,13 @@ class Function1Activity : AppCompatActivity() {
         // Test ingredients and API key
         val testIngredients = "tomato, cheese"
         val apiKey = "ea087b3041814c9d874cb0a459ed7cf1"
+        val createRecipeButton = findViewById<Button>(R.id.createRecipe)
+
+        createRecipeButton.setOnClickListener {
+
+            intent = Intent(this, CreateRecipe::class.java)
+            startActivity(intent)
+        }
 
         // Call the repository method
         repository.getRecipesByIngredients(testIngredients, apiKey) { recipes ->

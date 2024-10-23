@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PlatePlanner"
         tools:targetApi="31">
         <activity
+            android:name=".CreateRecipe"
+            android:exported="false" />
+        <activity
             android:name=".Function5Activity"
             android:exported="false" />
         <activity
